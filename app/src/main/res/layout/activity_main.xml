@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView_coin"
+        android:layout_width="168dp"
+        android:layout_height="183dp"
+        android:layout_marginTop="100dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_coin_24" />
+
+    <EditText
+        android:id="@+id/editText_ValorConta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_70"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_10"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Texto" />
+
+    <TextView
+        android:id="@+id/textView_Texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Digite um valor ex: 35.50"
+        android:textColor="#EC9535"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_70"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_10"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_coin" />
+
+    <SeekBar
+        android:id="@+id/seekBar_Percentual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#EC9535"
+        android:thumbTint="#FEB863"
+        app:layout_constraintEnd_toStartOf="@+id/gl_90"
+        app:layout_constraintStart_toStartOf="@+id/gl_20"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ValorConta" />
+
+    <TextView
+        android:id="@+id/textView_Percentual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="0%"
+        app:layout_constraintEnd_toStartOf="@+id/gl_20"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/gl_10"
+        app:layout_constraintTop_toBottomOf="@+id/editText_ValorConta" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_70"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_90"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <TextView
+        android:id="@+id/label_Gorjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Gorjeta"
+        app:layout_constraintStart_toStartOf="@+id/gl_10"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Percentual" />
+
+    <TextView
+        android:id="@+id/label_Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Total"
+        app:layout_constraintStart_toStartOf="@+id/gl_10"
+        app:layout_constraintTop_toBottomOf="@+id/label_Gorjeta" />
+
+    <TextView
+        android:id="@+id/textView_Gorjeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FED67B"
+        app:layout_constraintEnd_toStartOf="@+id/gl_70"
+        app:layout_constraintStart_toStartOf="@+id/gl_20"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_Percentual" />
+
+    <TextView
+        android:id="@+id/textView_Total"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#FDD57B"
+        app:layout_constraintEnd_toStartOf="@+id/gl_70"
+        app:layout_constraintStart_toStartOf="@+id/gl_20"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Gorjeta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
